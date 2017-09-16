@@ -1,7 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculatorController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculatorController">
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="330.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane layoutY="126.0" prefHeight="500.0" prefWidth="330.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="126.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="80.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="50.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="sin" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="88.0" text="sin" textFill="WHITE" />
+                  <Button fx:id="leftbrackets" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="90.0" text="(" textFill="WHITE" GridPane.rowIndex="1" />
+                  <Button fx:id="seven" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="97.0" prefWidth="85.0" text="7" textFill="DEEPSKYBLUE" GridPane.rowIndex="2" />
+                  <Button fx:id="four" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="78.0" prefWidth="85.0" text="4" textFill="DEEPSKYBLUE" GridPane.rowIndex="3" />
+                  <Button fx:id="one" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="80.0" prefWidth="85.0" text="1" textFill="DEEPSKYBLUE" GridPane.rowIndex="4" />
+                  <Button fx:id="eight" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="85.0" prefWidth="85.0" text="8" textFill="DEEPSKYBLUE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="five" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="86.0" prefWidth="85.0" text="5" textFill="DEEPSKYBLUE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="cos" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="85.0" text="cos" textFill="WHITE" GridPane.columnIndex="1" />
+                  <Button fx:id="two" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="79.0" prefWidth="85.0" text="2" textFill="DEEPSKYBLUE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="nine" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="105.0" prefWidth="103.0" text="9" textFill="DEEPSKYBLUE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="one" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="82.0" prefWidth="102.0" text="0" textFill="DEEPSKYBLUE" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Button fx:id="dot" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="82.0" prefWidth="96.0" text="." textFill="DEEPSKYBLUE" GridPane.rowIndex="5" />
+                  <Button fx:id="six" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="88.0" prefWidth="107.0" text="6" textFill="DEEPSKYBLUE" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="undo" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="99.0" text="Undo" textFill="WHITE" GridPane.columnIndex="2" />
+                  <Button fx:id="rightbrackets" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="91.0" text=")" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="powerof" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="106.0" text="a^b" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="allcrear" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="63.0" text="AC" textFill="WHITE" GridPane.columnIndex="3" />
+                  <Button fx:id="delete" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="57.0" text="DEL" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="devision" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="94.0" prefWidth="55.0" text="÷" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button fx:id="three" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="94.0" prefWidth="102.0" text="3" textFill="DEEPSKYBLUE" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button fx:id="equal" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="80.0" prefWidth="104.0" text="=" textFill="DEEPSKYBLUE" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Button fx:id="times" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="78.0" prefWidth="55.0" text="×" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button fx:id="plus" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="111.0" prefWidth="55.0" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Button fx:id="minus" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="94.0" prefWidth="55.0" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            <TextField fx:id="display" alignment="TOP_RIGHT" editable="false" layoutX="10.0" layoutY="14.0" prefHeight="112.0" prefWidth="309.0">
+               <font>
+                  <Font size="54.0" />
+               </font>
+            </TextField>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
 </BorderPane>
