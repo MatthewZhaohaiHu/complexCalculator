@@ -14,34 +14,10 @@ public class CalculatorController {
     private Button leftbrackets;
 
     @FXML
-    private Button seven;
-
-    @FXML
-    private Button four;
-
-    @FXML
-    private Button one;
-
-    @FXML
-    private Button eight;
-
-    @FXML
-    private Button five;
-
-    @FXML
     private Button cos;
 
     @FXML
-    private Button two;
-
-    @FXML
-    private Button nine;
-
-    @FXML
     private Button dot;
-
-    @FXML
-    private Button six;
 
     @FXML
     private Button undo;
@@ -62,9 +38,6 @@ public class CalculatorController {
     private Button devision;
 
     @FXML
-    private Button three;
-
-    @FXML
     private Button equal;
 
     @FXML
@@ -79,9 +52,31 @@ public class CalculatorController {
     @FXML
     private TextField display;
 
+    private boolean start = true;
+    private String operator;
+    
     @FXML
-    void handleButtonAction(ActionEvent event) {
-    		System.out.println("yeah?");
+    void processNumButAction(ActionEvent event) {
+    		String buttonText = ((Button)event.getSource()).getText();
+    		if(start) {
+    			start = false;
+    			display.setText(buttonText);
+    		}
+    		else {
+    			display.setText(display.getText() + buttonText);
+    		}
+    }
+
+    @FXML
+    void processOperatorButAction(ActionEvent event) {
+    		//String buttonText = ((Button)event.getSource()).getText();
+    		operator = event.getSource().toString();
+    		if(event.getSource() == equal) {
+    			
+    		}
+    		else {
+    			//calculation
+    		}
     }
 
 }
