@@ -7,47 +7,6 @@ import javafx.scene.control.TextField;
 
 public class CalculatorController {
 
-    @FXML
-    private Button sin;
-
-    @FXML
-    private Button leftbrackets;
-
-    @FXML
-    private Button cos;
-
-    @FXML
-    private Button dot;
-
-    @FXML
-    private Button undo;
-
-    @FXML
-    private Button rightbrackets;
-
-    @FXML
-    private Button powerof;
-
-    @FXML
-    private Button allcrear;
-
-    @FXML
-    private Button delete;
-
-    @FXML
-    private Button devision;
-
-    @FXML
-    private Button equal;
-
-    @FXML
-    private Button times;
-
-    @FXML
-    private Button plus;
-
-    @FXML
-    private Button minus;
 
     @FXML
     private TextField display;
@@ -81,12 +40,9 @@ public class CalculatorController {
     			display.setText("");
     		}
     		else {
-    			
 			if(operator.isEmpty())
 				return; //cal dont know what to do
-    			
     			display.setText(String.valueOf(model.calculate(firstnum, Long.parseLong(display.getText()), operator)));
-    			
     			operator = "";
     			start = true;
     		}
