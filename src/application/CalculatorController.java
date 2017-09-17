@@ -53,7 +53,9 @@ public class CalculatorController {
     private TextField display;
 
     private boolean start = true;
-    private String operator;
+    private String operator = "";
+    private long firstnum = 0;
+    private Model model = new Model();
     
     @FXML
     void processNumButAction(ActionEvent event) {
@@ -69,13 +71,24 @@ public class CalculatorController {
 
     @FXML
     void processOperatorButAction(ActionEvent event) {
-    		//String buttonText = ((Button)event.getSource()).getText();
-    		operator = event.getSource().toString();
-    		if(event.getSource() == equal) {
-    			
+    		String buttonText = ((Button)event.getSource()).getText();
+
+    		if(!"=".equals(buttonText)) {
+  			if(!operator.isEmpty())
+   				return;
+    			operator = buttonText;
+    			firstnum = Long.parseLong(display.getText());
+    			display.setText("");
     		}
     		else {
-    			//calculation
+    			
+			if(operator.isEmpty())
+				return; //cal dont know what to do
+    			
+    			display.setText(String.valueOf(model.calculate(firstnum, Long.parseLong(display.getText()), operator)));
+    			
+    			operator = "";
+    			start = true;
     		}
     }
 
