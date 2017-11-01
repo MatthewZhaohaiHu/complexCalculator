@@ -16,7 +16,6 @@ public class Model {
 				if(firstnum * secondnum == 0)
 					return 0;
 				return firstnum / secondnum;
-			//case
 				
 		}
 		System.out.println("Unknow operator " + operator);
