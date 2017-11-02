@@ -32,8 +32,8 @@ public class CalculatorController {
     void processOperatorButAction(ActionEvent event) {
     		String buttonText = ((Button)event.getSource()).getText();
 
-    		if(!"=".equals(buttonText)) {
-  			if(!operator.isEmpty())
+    		if(!"=".equals(buttonText)) { //when not equal to final calculator sign
+  			if(!operator.isEmpty())	 //do calculation before move to next operator 
    				return;
     			operator = buttonText;
     			firstnum = Long.parseLong(display.getText());
