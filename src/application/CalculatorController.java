@@ -38,7 +38,6 @@ public class CalculatorController {
    				return;
     			operator = buttonText;
     			firstnum = Float.parseFloat(display.getText());
-    			System.out.println("1st "+firstnum);
     			if ("DEL".equals(operator)) {
       				firstnum = 0;
       				display.setText("");

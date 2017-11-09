@@ -1,1 +1,34 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.button{
+	-fx-font-family: "Arial";
+	-fx-background-color:#FFFFFC;
+	-fx-text-fill:#2C95B9;
+	
+}
+#leftbrackets, #rightbrackets, #powerof{
+	-fx-background-color:#F3F5FF;
+}
+
+#delete, #devision, #times, #plus, #minus{
+	-fx-text-fill:#FFFFFF;
+}
+#delete{
+	-fx-background-color:#1553B8;
+}
+#devision{
+	-fx-background-color:#2C76CB;
+}
+#times{
+	-fx-background-color:#3498D9;
+}
+#minus{
+	-fx-background-color:#3CBCE8;
+}
+#plus{
+	-fx-background-color:#40D3F1;
+}
+#display{
+	-fx-background-color:#4F97D8;
+	-fx-text-fill:#FFFFFF;
+}
