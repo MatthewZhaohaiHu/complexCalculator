@@ -13,11 +13,12 @@ public class CalculatorController {
 
     private boolean start = true;
     private String operator = "";
-    private long firstnum = 0;
+    private float firstnum = 0;
     private Model model = new Model();
     
     @FXML
     void processNumButAction(ActionEvent event) {
+    		//dot also consider as a "Number" button	
     		String buttonText = ((Button)event.getSource()).getText();
     		if(start) {
     			start = false;
@@ -36,7 +37,7 @@ public class CalculatorController {
   			if(!operator.isEmpty())	 //do calculation before move to next operator 
    				return;
     			operator = buttonText;
-    			firstnum = Long.parseLong(display.getText());
+    			firstnum = Float.parseFloat(display.getText());
     			display.setText("");
     		}
     		else {

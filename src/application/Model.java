@@ -1,10 +1,11 @@
 package application;
 
 import javafx.scene.control.Button;
+import static java.lang.Math.pow;
 
 public class Model {
 
-	public long calculate(long firstnum, long secondnum, String operator) {
+	public float calculate(float firstnum, float secondnum, String operator) {
 		switch(operator.toString()) {
 			case "+":
 				return firstnum + secondnum;
@@ -16,15 +17,15 @@ public class Model {
 				if(firstnum * secondnum == 0)
 					return 0;
 				return firstnum / secondnum;
-			case "(":
+			case "(": // dont need num
 				return 0;
-			case ")":
+			case ")":  // dont need num
 				return 0;
-			case ".":
+			case ".": //only need 1 number
 				return 0;
-			case "a^b": //power sign
-				return 0;
-			case "DEL":
+			case "a^b": 
+				return (long) Math.pow(firstnum, secondnum);
+			case "DEL": //only need 1 number
 				return 0;
 		}
 		System.out.println("Unknow operator " + operator);
