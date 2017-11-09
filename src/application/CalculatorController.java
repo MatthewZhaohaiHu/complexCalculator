@@ -33,20 +33,29 @@ public class CalculatorController {
     void processOperatorButAction(ActionEvent event) {
     		String buttonText = ((Button)event.getSource()).getText();
 
-    		if(!"=".equals(buttonText)) { //when not equal to final calculator sign
-  			if(!operator.isEmpty())	 //do calculation before move to next operator 
+    		if(!"=".equals(buttonText)) { 
+  			if(!operator.isEmpty())	 
    				return;
     			operator = buttonText;
     			firstnum = Float.parseFloat(display.getText());
+    			System.out.println("1st "+firstnum);
+    			if ("DEL".equals(operator)) {
+      				firstnum = 0;
+      				display.setText("");
+      				operator = "";
+      				return;		
+    			}
     			display.setText("");
     		}
     		else {
 			if(operator.isEmpty())
-				return; //cal dont know what to do
+				return; 
     			display.setText(String.valueOf(model.calculate(firstnum, Long.parseLong(display.getText()), operator)));
     			operator = "";
     			start = true;
     		}
     }
+    
+    
 
 }

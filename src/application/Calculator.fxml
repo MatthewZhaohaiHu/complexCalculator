@@ -44,9 +44,9 @@
                 
                 <Button fx:id="leftbrackets" mnemonicParsing="false" onAction="#processOperatorButAction" prefHeight="56.0" prefWidth="177.0" text="(" textFill="WHITE" /> 
                 <Button fx:id="rightbrackets" mnemonicParsing="false" onAction="#processOperatorButAction" prefHeight="38.0" prefWidth="100.0" text=")" textFill="WHITE" GridPane.columnIndex="1" />
-                <Button fx:id="powerof" mnemonicParsing="false" onAction="#processOperatorButAction" prefHeight="83.0" prefWidth="85.0" text="a^b" textFill="WHITE" GridPane.columnIndex="2" />
                 <Button fx:id="delete" mnemonicParsing="false" onAction="#processOperatorButAction" prefHeight="67.0" prefWidth="54.0" text="DEL" textFill="WHITE" GridPane.columnIndex="3" />
                 
+                <Button fx:id="powerof" mnemonicParsing="false" onAction="#processOperatorButAction" prefHeight="83.0" prefWidth="85.0" text="a^b" textFill="WHITE" GridPane.columnIndex="2" />
                 <Button fx:id="devision" mnemonicParsing="false" onAction="#processOperatorButAction" prefHeight="62.0" prefWidth="164.0" text="÷" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                 <Button fx:id="equal" mnemonicParsing="false" onAction="#processOperatorButAction" prefHeight="95.0" prefWidth="182.0" text="=" textFill="DEEPSKYBLUE" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                 <Button fx:id="times" mnemonicParsing="false" onAction="#processOperatorButAction" prefHeight="71.0" prefWidth="125.0" text="×" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2" />
